@@ -1,10 +1,11 @@
 import { Slot } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function RootLayout() {
   return (
-    <View style={styles.conatiner}>
-      {/* <SafeAreaView style={styles.conatiner}> */}
+    // <View style={styles.conatiner}>
+    <SafeAreaView style={styles.conatiner}>
       <View style={styles.header}>
         <Text style={styles.headerText}>Header</Text>
       </View>
@@ -12,8 +13,8 @@ export default function RootLayout() {
       <View style={styles.footer}>
         <Text style={styles.footerText}>Footer</Text>
       </View>
-    </View>
-    // </SafeAreaView>
+      {/* </View> */}
+    </SafeAreaView>
   );
 }
 

@@ -1,5 +1,5 @@
 import { Link } from "expo-router";
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
   return (
@@ -29,11 +29,18 @@ export default function Index() {
       >
         Register
       </Link>
-      <Link
-        style={[styles.authButton, { backgroundColor: "#1e90ff" }]}
-        href="/forgot-password"
-      >
-        Forgot Password
+      <Link href="/forgot-password" asChild>
+        <Pressable
+          style={{
+            padding: 10,
+            borderRadius: 5,
+            width: 200,
+            alignItems: "center",
+            backgroundColor: "#34c571",
+          }}
+        >
+          <Text>Forgot Password</Text>
+        </Pressable>
       </Link>
     </View>
   );
