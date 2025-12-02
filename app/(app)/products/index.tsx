@@ -6,9 +6,7 @@ export default function Products() {
   return (
     <View style={styles.container}>
       <Text>Products</Text>
-      <Link href="./1" relativeToDirectory>
-        Product 1
-      </Link>
+      <Link href="./1" relativeToDirectory>Product 1</Link>
       <Link href="./2" relativeToDirectory>
         Product 2
       </Link>
