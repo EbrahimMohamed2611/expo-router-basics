@@ -1,10 +1,10 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-export default function ForgotPassword() {
+export default function Profile() {
   return (
     <View style={styles.container}>
-      <Text>ForgotPassword</Text>
+      <Text>Profile</Text>
     </View>
   );
 }
@@ -14,6 +14,5 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    gap: 20,
   },
 });
