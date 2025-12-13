@@ -1,52 +1,29 @@
-import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
-import { Drawer } from "expo-router/drawer";
+import { Stack } from "expo-router";
 import React from "react";
 import { StyleSheet } from "react-native";
 
 export default function DrawerLayout() {
   return (
-    <Drawer>
-      <Drawer.Screen
-        name="index"
+    <Stack>
+      <Stack.Screen name="index" options={{}} />
+      <Stack.Screen
+        name="price"
         options={{
-          title: "Home Title",
-          drawerLabel: "Home",
-          drawerIcon: ({ color, size }) => (
-            <FontAwesome5 name="home" color={color} size={size} />
-          ),
+          presentation: "modal",
+          animation: "slide_from_bottom",
         }}
       />
-      <Drawer.Screen
+      <Stack.Screen
         name="profile"
         options={{
-          title: "Profile Title",
-          drawerLabel: "Profile",
-          drawerIcon: ({ color, size }) => (
-            <FontAwesome5 name="user-alt" color={color} size={size} />
-          ),
+          presentation: "modal",
+          animation: "slide_from_bottom",
         }}
       />
-      <Drawer.Screen
-        name="settings"
-        options={{
-          title: "Settings Title",
-          drawerLabel: "Settings",
-          drawerIcon: ({ color, size }) => (
-            <FontAwesome5 name="cog" color={color} size={size} />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        name="dashboard"
-        options={{
-          title: "Dashboard Title",
-          drawerLabel: "Dashboard",
-          drawerIcon: ({ color, size }) => (
-            <FontAwesome5 name="tachometer-alt" color={color} size={size} />
-          ),
-        }}
-      />
-    </Drawer>
+      <Stack.Screen name="dashboard" options={{}} />
+      <Stack.Screen name="settings" options={{}} />
+      <Stack.Screen name="about" options={{}} />
+    </Stack>
   );
 }
 
